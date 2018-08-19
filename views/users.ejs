@@ -1,0 +1,52 @@
+<% include partials/header %>
+    <header>
+        <h1 class="display-3 text-center my-4">Users</h1>
+    </header>
+    <div class="container">
+        <div class="row">
+                <table id="table" class="table" >  
+                        <thead>  
+                            <tr>  
+                                <th scope="col">ID</th>  
+                                <th scope="col">First Name</th>  
+                                <th scope="col">Last Name</th>  
+                                <th scope="col">Credit</th>  
+                                <th scope="col">Profit</th>  
+                                
+                            </tr>  
+                        </thead>  
+                         <tbody>  
+                         <% print.forEach(function (users) { %>
+                            <tr scope = "row">  
+                                <td><%= users.user_id %></td>  
+                                <td><%= users.user_first_name %></td>  
+                                <td><%= users.user_last_name %></td>
+                                <td><%= users.credit %></td>
+                                <td><%= users.profit %></td>
+                                
+                            </tr>                                   
+                         <% }) %>
+                         </tbody>
+                    </table>
+
+        </div>
+        <div class="row" id="user-cards">
+                <% print.forEach(function (users) { %>
+
+                <div class="card m-3 bg-light" style="width: 18rem;" id=<%= users.user_id %>>
+                        <img class="card-img-top" <%- users.image_url %> >
+                        <div class="card-body">
+                          <h5 class="card-title"><%= users.user_first_name %></h5>
+                          <p class="card-text"><%= users.user_last_name %></p>
+                        </div>
+                        <ul class="list-group list-group-flush bg-light">
+                          <li class="list-group-item bg-light">User Credit: $ $<%= users.credit %></li>
+                          <li class="list-group-item bg-light">Profit: $ <%= users.profit %></li>
+                        </ul>
+                      </div>
+                    <% }) %>
+                      
+
+        </div>
+    </div>
+    <% include partials/footer %>

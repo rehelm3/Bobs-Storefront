@@ -1,0 +1,42 @@
+<% include partials/header %>
+  <d1iv class="container">
+    <div class="row">
+              <h1 class="display-4 text-center my-4">Current Number of Distinct Products <%=data%></h1>
+  <br>
+        <table class="table">
+            <thead>
+              <h2 class="display-3 text-center my-3">Current Products</h2>
+              <tr>
+                <th scope="col">Product Name</th>
+                <th scope="col">Image_Url</th>
+                <th scope="col">Desc</th>
+                <th scope="col">Dept</th>                
+                <th scope="col">In-stock Qty</th>
+                <th scope="col">Consumer Price</th>
+                <th scope="col">Biz Cost</th>
+                <th scope="col">Lifetime Sold</th>
+                
+                
+              </tr>
+            </thead>
+            <tbody id="product-list">
+              <tr scope = "row" >
+                <td><%= product_name %></td>
+                <td><%= image_url %></td>
+                <td><%= product_desc %></td>
+                <td><%= department_name %></td>
+                <td><%= instock_quantity %></td>
+                <td><%= consumer_price %></td>
+                <td><%= business_cost %></td>
+                <td><%= lifetime_sold %></td>
+                
+              </tr>
+            </tbody>
+          </table>
+    </div>
+ </d1iv>
+
+  <% include partials/footer %>
+
+
+

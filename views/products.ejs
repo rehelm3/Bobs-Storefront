@@ -1,0 +1,53 @@
+<% include partials/header %>
+    <header>
+        <h1 class="display-3 text-center my-4">Our Products</h1>
+    </header>
+    <div class="container">
+        <div class="row">
+                <table id="table" class="table" >  
+                        <thead>  
+                            <tr>  
+                                <th scope="col">Product Name</th>  
+                                <th scope="col">Dept</th>  
+                                <th scope="col">Qty Available</th>  
+                                <th scope="col">Price</th>  
+                                
+                            </tr>  
+                        </thead>  
+                         <tbody>  
+                         <% print.forEach(function (product) { %>
+                            <tr scope = "row">  
+                                <td><%= product.product_name %></td>  
+                                <td><%= product.department_name %></td>
+                                <td><%= product.instock_quantity %></td>
+                                <td><%= product.consumer_price %></td>
+                                
+                            </tr>                                   
+                         <% }) %>
+                         </tbody>
+                    </table>
+
+        </div>
+        <div class="row" id="product-cards">
+                <% print.forEach(function (product) { %>
+
+                <div class="card m-3 bg-light" style="width: 18rem;" id=<%= product.item_id %>>
+                        <img class="card-img-top" <%- product.image_url %> alt="Card image cap">
+                        <div class="card-body">
+                          <h5 class="card-title"><%= product.product_name %></h5>
+                          <p class="card-text"><%= product.product_desc %></p>
+                        </div>
+                        <ul class="list-group list-group-flush bg-light">
+                          <li class="list-group-item bg-light">Price: $<%= product.consumer_price %></li>
+                          <li class="list-group-item bg-light">In Stock: <%= product.instock_quantity %></li>
+                        </ul>
+                        <div class="card-body">
+                        <a href='/buy/<%= product.item_id %>' class="btn btn-success" onclick='myFunction(' + <%= product.item_id %> +')'</a>Purchase</a>
+                        </div>
+                      </div>
+                    <% }) %>
+                      
+
+        </div>
+    </div>
+    <% include partials/footer %>

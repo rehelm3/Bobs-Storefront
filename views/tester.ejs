@@ -1,0 +1,111 @@
+
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.css" />
+  <style>
+    .success, .error {
+      color: white;
+      padding: 5px;
+      margin: 5px 0 15px 0;
+    }
+
+    .success {
+      background: green;
+    }
+
+    .error {
+      background: red;
+    }
+  
+  </style>
+  <title>Favorite Songs</title>
+</head>
+<body>
+  <div class="container">
+    <div>
+        <table class="u-full-width">
+            <thead>
+              <h1>Join Us</h1>
+<p class="lead">Enter your email to join
+  others on our mail list.</p>
+  <br>
+              <h2>Current Products</h2>
+              <tr>
+                <th>Product Name</th>
+                <th>Image_Url</th>
+                <th>Desc</th>
+                <th>Dept</th>                
+                <th>In-stock Qty</th>
+                <th>Consumer Price</th>
+                <th>Biz Cost</th>
+                
+              </tr>
+            </thead>
+            <tbody id="song-list">
+             
+            </tbody>
+          </table>
+            <tbody id="song-list"></tbody>
+          </table>
+    </div>
+  <br><br>
+    <h4>Add Product</h4>
+    <form id="song-input-form" name="song-insert" action="/register" method="POST">
+      <div>
+        <label for="name">Product Name</label>
+        <input type="text" id="prod-name-input" class="u-full-width" name="product_name">
+      </div>
+
+      <div>
+        <label for="artis">Image_URL use format 'img src='tops.jpg'</label>
+        <input type="text" id="image-url-input" class="u-full-width" name="image_url">
+      </div>
+
+      <div>
+        <label for="artis">Product Desc</label>
+        <input type="text" id="prod-desc-input" class="u-full-width" name="product_desc">
+      </div>
+
+      <div>
+        <label for="score">Dept.</label>
+        <input type="text" id="dept-input" class="u-full-width" name="department_name">
+      </div>
+
+      <div>
+        <label for="qty">instock quantity</label>
+        <input type="text" id="genre-input" class="u-full-width" name="instock_quantity">
+      </div>
+
+      <div>
+        <label for="price">Consumer Price</label>
+        <input type="text" id="consumer_price" class="u-full-width" name="consumer_price">
+      </div>
+
+      <div>
+        <label for="price">Business Cost</label>
+        <input type="text" id="business_cost" class="u-full-width" name="business_cost">
+      </div>
+
+      <div>
+        <input type="submit" value="Submit" class="u-full-width">
+      </div>
+
+    </form>
+
+
+
+
+ 
+
+  </div>
+  <!-- <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>   -->
+  <!-- <script src="https://www.gstatic.com/firebasejs/4.13.0/firebase.js"></script> -->
+  <!-- <script src="resources/js/apptrain.js"></script> -->
+</body>
+</html>
+
+

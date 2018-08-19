@@ -1,0 +1,65 @@
+<% include partials/header %>
+  <div class="container">
+    <div>
+              <h1 class="display-4 text-center my-4">Current Number of Distinct Products <%=data%></h1>
+  <br>
+ </div>
+  <br><br>
+    <h4 class="my-3">Add Product</h4>
+    <form id="product-input-form" name="product-insert" action="/added" method="POST">
+      <div class="form-group">
+        <label for="InputProductName">Product Name</label>
+        <input type="text" id="prod-name-input" class="form-control" name="product_name">
+      </div>
+
+      <div>
+        <label for="artis">Image_URL please use format 'img src='/tops.jpg'</label>
+        <input type="text" id="image-url-input" class="form-control" name="image_url">
+      </div>
+
+      <div>
+        <label for="artis">Product Desc</label>
+        <input type="text" id="prod-desc-input" class="form-control" name="product_desc">
+      </div>
+
+      <div>
+        <label for="score">Dept.</label>
+        <input type="text" id="dept-input" class="form-control" name="department_name">
+      </div>
+
+      <div>
+        <label for="qty">instock quantity</label>
+        <input type="text" id="genre-input" class="form-control" name="instock_quantity">
+      </div>
+
+      <div>
+        <label for="price">Consumer Price</label>
+        <input type="text" id="consumer_price" class="form-control" name="consumer_price">
+      </div>
+
+      <div>
+        <label for="price">Business Cost</label>
+        <input type="text" id="business_cost" class="form-control" name="business_cost">
+      </div>
+
+      <div>
+        <label for="price">Lifetime Sold</label>
+        <input type="text" id="lifetime_sold" class="form-control" name="lifetime_sold">
+      </div>
+
+      <div>
+        <input type="submit" value="Submit" class="btn btn-primary my-2">
+      </div>
+
+    </form>
+
+
+
+
+ 
+
+  </div>
+  <% include partials/footer %>
+
+
+

@@ -1,0 +1,32 @@
+<% include partials/header %>
+    <header>
+        <h1 class="display-3 text-center my-4">Management Console</h1>
+    </header>
+    <div class="container">
+        <div class="row">
+            <h2 class="text-center">Current Inventory</h2>
+            <table id="table" class="table" >  
+                <thead>  
+                    <tr>  
+                        <th scope="col">Product Name</th>  
+                        <th scope="col">Dept</th>  
+                        <th scope="col">Qty Available</th>  
+                        <th scope="col">Price</th>  
+                        
+                    </tr>  
+                </thead>  
+                    <tbody>  
+                    <% print.forEach(function (product) { %>
+                    <tr scope = "row">  
+                        <td><%= product.product_name %></td>  
+                        <td><%= product.department_name %></td>
+                        <td><%= product.instock_quantity %></td>
+                        <td><%= product.consumer_price %></td>
+                        
+                    </tr>                                   
+                    <% }) %>
+                    </tbody>
+            </table>                      
+        </div>
+    </div>
+    <% include partials/footer %>
